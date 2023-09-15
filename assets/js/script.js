@@ -48,7 +48,7 @@ form.addEventListener("submit", function(event) {
     }
 
     if (!validatePassword(password)) {
-        passwordMsg.innerText = "Wrong combination, Use lowercase and uppercase letters and numbers and special characters";
+        passwordMsg.innerText = "Wrong combination, Use letters numbers and special characters";
         return;
     }
 
