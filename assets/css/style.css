@@ -262,5 +262,6 @@ input:-webkit-autofill:focus {
     outline: none;
     background-color: transparent;
     font-size: 14px;
-    color: var(--main-light);
+    color: var(--main-white);
+    -webkit-text-fill-color:  var(--main-white);
 }
