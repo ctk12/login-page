@@ -252,3 +252,15 @@ body {
         width: 100%;
     }
 }
+
+
+/* input autofill style */
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    font-size: inherit;
+    color: inherit;
+}
