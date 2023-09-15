@@ -260,7 +260,7 @@ input:-webkit-autofill:hover,
 input:-webkit-autofill:focus {
     border: none;
     outline: none;
-    background-color: transparent;
+    background-color: transparent !important;
     font-size: 14px;
     color: var(--main-white);
     -webkit-text-fill-color:  var(--main-white);
