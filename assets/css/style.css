@@ -33,7 +33,7 @@ body {
     position: absolute;
     top: 0;
     right: 0;
-    height: 100vh;
+    height: 100%;
 }
 
 .login__ellipse {
@@ -238,8 +238,8 @@ body {
 
 @media screen and (max-width: 1024px) {
     .login__vector-1 {
-        width: 70vw;
-        height: 70vh;
+        width: 80%;
+        height: max-content;
     }
 
     .popup .popup__msg {
