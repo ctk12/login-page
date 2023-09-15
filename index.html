@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;600&display=swap" rel="stylesheet">
+    <script>
+         const user = localStorage.getItem("LOGGED_USER");
+         if (user) {
+            window.location.href = "/login-page/dashboard.html";
+        }
+    </script>
+</head>
+<body>
+    <section class="login">
+       <div class="login__form">
+            <div class="logo">
+                <img src="./assets/images/login-logo.svg" alt="Login logo">
+            </div>
+
+            <form class="form" id="form">
+                <div class="form__control">
+                    <label for="username">
+                        <img src="./assets/images/login-username-icon.svg" alt="Username icon">
+                    </label>
+                    <input type="text" name="username" id="username" placeholder="username">
+                </div>
+                <p class="error-msg" id="username-msg"></p>
+    
+                <div class="form__control">
+                    <label for="password">
+                        <img src="./assets/images/login-password-icon.svg" alt="Password icon">
+                    </label>
+                    <input type="password" name="password" id="password" placeholder="password">
+                </div>
+                <p class="error-msg" id="password-msg"></p>
+    
+                <button class="form__submit" type="submit" name="submit">login</button>
+                <p class="form__forgot-password">Forgot password?</p>
+            </form>
+       </div>
+
+       <img class="login__vector-1" src="./assets/images/vector-1.svg" alt="Vector">
+
+       <div class="login__ellipse">
+        <div class="ellipse">
+            <img class="ellipse__d-1" src="./assets/images/ellipse-1.svg" alt="Ellipse">
+            <img class="ellipse__d-2" src="./assets/images/ellipse-2.svg" alt="Ellipse">
+            <img class="ellipse__d-3" src="./assets/images/ellipse-1.svg" alt="Ellipse">
+        </div>
+       </div>
+    </section>
+
+    <div class="popup" id="popup">
+        <div class="popup__msg">
+            <div> <span>Error Message</span> <span onclick="closePop()">X</span></div>
+            <p id="pop-msg"></p>
+        </div>
+    </div>
+
+    <script src="./assets/js/script.js"></script>
+</body>
+</html>

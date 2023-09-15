@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <style>
+        button {
+            padding: 10px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+    <script>
+        const user = localStorage.getItem("LOGGED_USER");
+        if (user === null || user === "") {
+            window.location.href = "/login-page";
+        }
+    </script>
+</head>
+<body>
+    <h1>Welcome to Dashboard</h1>
+    <h5 id="user"></h5>
+
+    <button onclick="logout()">Logout</button>
+
+    <script>
+        if (user) {
+            document.getElementById("user").innerText = `Username: ${user}`;
+        }
+
+        function logout() {
+           if (confirm("Are sure to logout?")) {
+            localStorage.removeItem("LOGGED_USER");
+            window.location.href = "/login-page";
+           }
+        }
+    </script>
+</body>
+</html>
